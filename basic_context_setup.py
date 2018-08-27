@@ -5,7 +5,7 @@ import strax
 cache_data_directory = '.'  # Maybe change this where you want new files to go
 
 st = strax.Context(register_all=strax.xenon.plugins,
-                   storage=[strax.DataDirectory(cache_data_directory)
+                   storage=[strax.DataDirectory(cache_data_directory),
                             strax.SimpleS3Store(readonly=True)],
                    config={'pax_raw_dir' : './'})
 
